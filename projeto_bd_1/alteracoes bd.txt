@@ -17,24 +17,106 @@ WHERE idcliente NOT IN (SELECT idcliente
 DELETE FROM funcionario
 WHERE idfuncionario = 2
 
-• IN
-• NOT IN
-• BETWEEN
-• NOT BETWEEN
-• IS NULL
-• IS NOT NULL
-• LIKE
-• NOT LIKE
-• ORDER BY
-• COUNT
-• SUM
-• AVG
-• MAX
-• MIN
-• GROUP BY
-• HAVING
-• INNER JOIN
-• LEFT JOIN
-• RIGHT JOIN
-• FULL JOIN
-• SUBCONSULTA
+/** IN **/
+SELECT * FROM TELEFONE
+WHERE tip IS ('Fixo','Fax');
+
+
+/** NOT IN **/
+SELECT * FROM TELEFONE
+WHERE tipo IS NOT ('Celular');
+
+/** BETWEEN **/
+SELECT * FROM CONTRATO
+WERE valor BETWEEN '50000' AND '100000';
+
+/** NOT BETWEEN **/
+SELECT * FROM AGENDA
+WHERE CAST(dia AS DATE) NOT BETWEEN '2019-10-01' AND '2019-12-31';
+
+/** IS NULL **/
+SELECT * FROM ADVOGADO
+WHERE id_coordenado IS NULL;
+
+/** IS NOT NULL **/
+SELECT * FROM ADVOGADO
+WHERE id_coordenado IS NOT NULL;
+
+/** LIKE **/
+SELECT * FROM CLIENTE
+WHERE bairro LIKE 'b%';
+
+/** NOT LIKE **/
+SELECT * FROM JUIZ
+WHERE nome NOT LIKE 'c%';
+
+/** ORDER BY **/
+SELECT * FROM CLIENTE
+WHERE BAIRRO IS 'Centro'
+ORDER BY name;
+
+/** COUNT **/
+SELECT COUNT(nome)
+FROM FUNCIONÁRIO
+WHERE nome LIKE 'c%';
+
+/** SUM **/
+SELECT SUM(valor) AS total
+FROM CONTRATO;
+
+/** AVG **/
+SELECT AVG(valor) AS valor_medio
+FROM CONTRATO;
+
+/** MAX **/
+SELECT MIN(valor) AS valor_max
+FROM CONTRATO;
+
+/** MIN **/
+SELECT MIN(valor) AS valor_minimo
+FROM CONTRATO;
+
+/** GROUP BY **/
+SELECT * FROM CONTRATO
+GROUP BY Bairro
+ORDER BY nome;
+
+
+/** HAVING **/
+SELECT COUNT(idcliente), Bairro
+FROM CLIENTE
+GROUP BY Bairro
+HAVING COUNT(idcliente) >= 3;
+
+/** INNER JOIN **/
+SELECT CLIENTE.nome, GERA.idcontrato, CONTRATO.numerocontrato
+FROM CLIENTE
+INNER JOIN GERA
+ON CLIENTE.idcontrato = GERA.idcontrato
+ORDER BY CLIENTE.nome;
+
+/** LEFT JOIN **/
+SELECT PROCESSO.numProcesso, REU.idreu
+FROM PROCESSO
+LEFT JOIN PROCESSO 
+ON PROCESSO.idreu = REU.idreu
+ORDER BY PROCESSO.numProcesso;
+
+/** RIGHT JOIN **/
+SELECT PROCESSO.numProcesso, TESTEMUNHA.idtestemunha
+FROM PROCESSO
+RIGHT JOIN TESTEMUNHA ON PROCESSO.idtestemunha = TESTEMUNHA.idtestemunha
+ORDER BY PROCESSO.numProcesso;
+
+/** FULL JOIN **/
+SELECT PROCESSO.numProcesso, DEFENSOR.iddefensor
+FROM PROCESSO
+FULL OUTER JOIN PROCESSO ON PROCESSO.iddefensor = DEFENSOR.iddefensor
+ORDER BY PROCESSO.numProcesso;
+
+/** SUBCONSULTA **/
+SELECT idcliente, nome, bairro
+FROM CLIENTE
+WHERE idtelefone IN (SELECT idtelefone FROM TELEFONE
+WHERE idtelefone = (SELECT tipo FROM TELEFONE
+WHERE tipo = 'Celular'))
