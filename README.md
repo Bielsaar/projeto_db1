@@ -33,6 +33,7 @@
 - 5.19 Tabela Vara
 6. Script de Criação do BD
 7. Script de povoamento do BD
+8. Scripts de alterações
 
 ------------
 # 1. Minimundo de um escritório de advocacia
@@ -649,16 +650,66 @@ insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (3, 'Janenna Ma
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (4, 'Lucy Overstreet', 'Gerald Hill', 'Altiplano');
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (5, 'Lita Treagus', 'Grasskamp Drive', 'Centro');
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (6, 'Creusa Marcelino', 'Jagua street', 'Jaguaribe');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (7,'Kirestin Franco','Ap #237-4915 Consectetuer Av.','Manaira');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (8,'Christian Gregory','305 Mauris, Av.','Bessa');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (9,'Nadine Morton','795 Nibh. St.','Centro');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (10,'Vladimir Orr','9112 Eu Ave','Cabo Branco');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (11,'Anastasia Small','973 Accumsan Rd.','Altiplano');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (12,'Madonna Gilbert','23Luctus Ave','Manaira');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (13,'Clinton Conley','7875 Fusce St.','Tambaú');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (14,'Wilma Flowers','88 Taner, Street','Tambia');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (15,'Belle Anthony','2150 In Street','Manaira');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (16,'Ralph House','173-627 Curabitur Avenue','Miramar');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (17,'Fleur Vang','803-8231 Ullamcorper St.','Centro');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (18,'Odette Park','9841 Nunc Avenue','Altiplano');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (19,'Addison Cox','2420 Lorem Road','Cabedelo');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (20,'Hop Kaufman','413 Neque Av.','Jaguaribe');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (21,'Cleo Palmer','Ap #365-9160 Augue Road','Cabedelo');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (22,'Cedric Hart','Ap #134-757 Consequat Rd.','Miramar');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (23,'Janna White','8965 Pede. Street','Bessa');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (24,'Quinn Salazar','Ap #726-2898 Veludo, Av.','Cabo Branco');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (25,'Kareem Rhodes','Ap #234-4517 Cras Av.','Jaguaribe');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (26,'Heather Lewis','829-154 Sed Road','Centro');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (27,'Hayley Newman','Ap #390-6636 Augue Avenue','Torre');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (28,'Rajah Sears','Ap #674-3556 Est, Rd.','Bancarios');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (29,'Thomas Alston','Ap #931-6928 Dictum. Av.','Castelo Branco'); 
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (30,'Kerry Love','Ap #641, 9376 Ultrices. Av.','Centro');
+
 
 /**Tabela Física**/
 insert into FISICA (idcliente, cpf) values (1, 84138701001);
 insert into FISICA (idcliente, cpf) values (2, 98289648448);
 insert into FISICA (idcliente, cpf) values (3, 94002059022);
+insert into FISICA (idcliente, cpf) values (7, 84136781001);
+insert into FISICA (idcliente, cpf) values (8, 98289644567);
+insert into FISICA (idcliente, cpf) values (9, 10092059022);
+insert into FISICA (idcliente, cpf) values (10, 51067301001);
+insert into FISICA (idcliente, cpf) values (11, 45089648487);
+insert into FISICA (idcliente, cpf) values (12, 68900205917);
+insert into FISICA (idcliente, cpf) values (13, 84138712987);
+insert into FISICA (idcliente, cpf) values (14, 12289648448);
+insert into FISICA (idcliente, cpf) values (15, 74502059022);
+
 
 /**Tabela Jurídica**/
 insert into JURIDICA (idcliente, cnpj) values (4, 36808061000127);
 insert into JURIDICA (idcliente, cnpj) values (5, 70897293000137);
 insert into JURIDICA (idcliente, cnpj) values (6, 50897293100137);
+insert into JURIDICA (idcliente, cnpj) values (16,43789123000101);
+insert into JURIDICA (idcliente, cnpj) values (17,43123654000101);
+insert into JURIDICA (idcliente, cnpj) values (18,43524617000101);
+insert into JURIDICA (idcliente, cnpj) values (19,32123456000101);
+insert into JURIDICA (idcliente, cnpj) values (20,32321987000101);
+insert into JURIDICA (idcliente, cnpj) values (21,21432567000101);
+insert into JURIDICA (idcliente, cnpj) values (22,21123456000101);
+insert into JURIDICA (idcliente, cnpj) values (23,21987543000101);
+insert into JURIDICA (idcliente, cnpj) values (24,22123456000101);
+insert into JURIDICA (idcliente, cnpj) values (25,22321654000101);
+insert into JURIDICA (idcliente, cnpj) values (26,22987456000101);
+insert into JURIDICA (idcliente, cnpj) values (27,17123456000101);
+insert into JURIDICA (idcliente, cnpj) values (28,17567234000101);
+insert into JURIDICA (idcliente, cnpj) values (29,15123456000101);
+insert into JURIDICA (idcliente, cnpj) values (30,98456123000101);
 
 /**Tabela Telefone**/
 insert into TELEFONE (idcliente, fone, tipo) values (1, '1212265854', 'Celular');
@@ -666,13 +717,65 @@ insert into TELEFONE (idcliente, fone, tipo) values (2, '6143429669', 'Fixo');
 insert into TELEFONE (idcliente, fone, tipo) values (3, '6474226373', 'Fixo');
 insert into TELEFONE (idcliente, fone, tipo) values (4, '5107573673', 'Celular');
 insert into TELEFONE (idcliente, fone, tipo) values (5, '6074774231', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (13,'7920308418', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (21,'9911499223', 'Fax');
+insert into TELEFONE (idcliente, fone, tipo) values (15,'7916686625', 'Fax');
+insert into TELEFONE (idcliente, fone, tipo) values (17,'5978228536', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (22,'6931534430', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (5, '4985754502', 'Fax');
+insert into TELEFONE (idcliente, fone, tipo) values (24,'8925031371', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (25,'9962329511', 'Fax');
+insert into TELEFONE (idcliente, fone, tipo) values (21,'4974238321', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (24,'9926384574', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (21,'4985029554', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (21,'4244542514', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (20,'4931947288', 'Fax' );
+insert into TELEFONE (idcliente, fone, tipo) values (13,'9915051456', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (7, '4983274310', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (12,'9975919389', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (12,'9993087536', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (8, '9906554163', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (6, '4928008514', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (10,'4948363318', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (22,'9949290047', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (4, '4971460353', 'Fax');
+insert into TELEFONE (idcliente, fone, tipo) values (1, '4932553537', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (29,'9946562784', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (18,'9262650121', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (14,'9938096403', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (19,'4961397733', 'Fax');
+insert into TELEFONE (idcliente, fone, tipo) values (16,'4945418773', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (12,'4983592596', 'fax');
+insert into TELEFONE (idcliente, fone, tipo) values (25,'9942474476', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (16,'9917946816', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (20,'4900314031', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (12,'9908291039', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (25,'4971771142', 'Fax');
+insert into TELEFONE (idcliente, fone, tipo) values (3, '4977116849', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (10,'9989617796', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (10,'9963452725', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (24,'4993984535', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (23,'9884831445', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (12,'4876393782', 'Fixo');
+insert into TELEFONE (idcliente, fone, tipo) values (26,'9810828040', 'Celular');
+insert into TELEFONE (idcliente, fone, tipo) values (18,'9897171529', 'Celular');
 
 /**Tabela Consulta**/
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (502, 5, 'Inventário');
-insert into CONSULTA (idconsulta, idfuncionario, pauta) values (687, 10, 'Inventário');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (687, 6, 'Inventário');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (105, 7, 'Defesa Criminal');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (278, 6, 'Penhora');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (383, 8, 'Defesa Criminal');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (455, 5, 'Inventário');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (569, 5, 'Penhora');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (150, 7, 'Defesa Criminal');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (467, 6, 'Penhora');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (210, 10, 'Defesa Criminal');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (42, 7, 'Inventário');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (59, 6, 'Penhora');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (198, 7, 'Defesa Criminal');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (314, 6, 'Penhora');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (256, 10, 'Defesa Criminal');
 
 /**Tabela Agenda**/
 insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('7:33', 1, '2019-05-15', 502);
@@ -680,22 +783,53 @@ insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('10:04', 2,
 insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('8:54', 3, '2019-10-30', 105);
 insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('9:59', 4, '2019-07-11', 278);
 insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('8:05', 5, '2019-10-04', 383);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:15', 14,'2019-06-18', 455);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('9:15', 25,'2019-06-20', 569);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:16', 14,'2019-06-08', 150);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('13:50', 12,'2019-10-20', 467);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('13:29', 21,'2019-04-26', 210);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('8:09', 5, '2019-10-03', 42);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:00', 14,'2019-06-27', 59);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('10:15', 25,'2019-06-01', 198);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('14:00', 14,'2019-06-07', 314);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('15:30', 12,'2019-10-19', 256);
+
 
 /**Tabela Contrato**/
 
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (59520, 1000235, 150000);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (2578, 1000257, 78000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (95, 1000235, 150000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (257, 1000257, 78000);
 insert into CONTRATO (idcontrato, numero_contrato, valor) values (101, 1000784, 900);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (1125, 1000001, 3769050);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (9668, 1000425, 12300);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (112, 1000001, 76900);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (96, 1000425, 12300);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (20, 1000238, 190000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (78, 1000258, 75000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (150, 1000785, 9000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (125, 1000000, 59500);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (268, 1000426, 12000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (52, 1000239, 50000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (278, 1000259, 60000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (145, 1000786, 1900);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (225, 1000003, 37500);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (98, 1000427, 123000);
 
 
 /**Tabela Gera**/
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (278, 4, '2019-07-11', 59520);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (105, 3, '2019-10-30', 2578);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (687, 2, '2020-05-31', 101);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (502, 1, '2019-05-15', 1125);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (383, 5, '2019-10-04', 9668);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (278, 4, '2019-05-15', 95);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (105, 3, '2020-05-31', 257);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (687, 2, '2019-10-30', 101);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (502, 1, '2019-07-11', 112);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (383, 5, '2019-10-04', 96);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (455, 4, '2019-06-18', 20);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (150, 3, '2019-06-20', 78);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (569, 2, '2019-06-08', 150);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (467, 1, '2019-10-20', 125);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (210, 5, '2019-04-26', 268);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (42, 4,  '2019-10-04', 52);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (59, 3,  '2019-06-27', 278);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (198, 2, '2019-06-01', 145);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (314, 1, '2019-06-07', 225);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (256, 5, '2019-10-20', 98);
 
 /**Tabela Defensor**/
 insert into DEFENSOR (iddefensor, nome, oab_def, escritorio) values (74, 'Melissa Golton', 7944, 'Demizz');
@@ -740,9 +874,136 @@ insert into VINCULADO (iddefensor, idreu, idtestemunha) values (74, 173, 294);
 insert into VINCULADO (iddefensor, idreu, idtestemunha) values (78, 168, 213);
 
 /**Tabela Processo**/
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (989, 18607278320198152001, 59520, 74, 151, 294, 500, 400);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (898, 18507278320198152001, 2578, 75, 152, 234, 501, 240);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (989, 18607278320198152001, 95, 74, 151, 294, 500, 400);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (898, 18507278320198152001, 257, 75, 152, 234, 501, 240);
 insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (797, 18707278320198152001, 101, 76, 200, 263, 502, 450);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (696, 18807278320198152001, 1125, 77, 173, 216, 503, 460);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (595, 18907278320198152001, 9668, 78, 168, 213, 504, 230);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (696, 18807278320198152001, 112, 77, 173, 216, 503, 460);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (595, 18907278320198152001, 225, 78, 168, 213, 504, 230);
+```
+
+# 8. Scripts de alterações
+
+```sql
+/**Modifica OAB de um advogado**/
+UPDATE advogado
+SET oab = 20209
+WHERE idfuncionario = 9
+
+/**Modifica telefone e tipo**/
+UPDATE telefone
+SET fone = 2007573677, tipo = Fixo
+WHERE idclient = 4 AND tipo = Celular
+
+/**Deleta clientes sem agendamento**/
+DELETE FROM cliente
+WHERE idcliente NOT IN (SELECT idcliente 
+		    FROM AGENDA)
+
+/**Deleta funcionario**/
+DELETE FROM funcionario
+WHERE idfuncionario = 2
+
+/** IN **/
+SELECT * FROM TELEFONE
+WHERE tip IS ('Fixo','Fax');
+
+
+/** NOT IN **/
+SELECT * FROM TELEFONE
+WHERE tipo IS NOT ('Celular');
+
+/** BETWEEN **/
+SELECT * FROM CONTRATO
+WERE valor BETWEEN '50000' AND '100000';
+
+/** NOT BETWEEN **/
+SELECT * FROM AGENDA
+WHERE CAST(dia AS DATE) NOT BETWEEN '2019-10-01' AND '2019-12-31';
+
+/** IS NULL **/
+SELECT * FROM ADVOGADO
+WHERE id_coordenado IS NULL;
+
+/** IS NOT NULL **/
+SELECT * FROM ADVOGADO
+WHERE id_coordenado IS NOT NULL;
+
+/** LIKE **/
+SELECT * FROM CLIENTE
+WHERE bairro LIKE 'b%';
+
+/** NOT LIKE **/
+SELECT * FROM JUIZ
+WHERE nome NOT LIKE 'c%';
+
+/** ORDER BY **/
+SELECT * FROM CLIENTE
+WHERE BAIRRO IS 'Centro'
+ORDER BY name;
+
+/** COUNT **/
+SELECT COUNT(nome)
+FROM FUNCIONÁRIO
+WHERE nome LIKE 'c%';
+
+/** SUM **/
+SELECT SUM(valor) AS total
+FROM CONTRATO;
+
+/** AVG **/
+SELECT AVG(valor) AS valor_medio
+FROM CONTRATO;
+
+/** MAX **/
+SELECT MIN(valor) AS valor_max
+FROM CONTRATO;
+
+/** MIN **/
+SELECT MIN(valor) AS valor_minimo
+FROM CONTRATO;
+
+/** GROUP BY **/
+SELECT * FROM CONTRATO
+GROUP BY Bairro
+ORDER BY nome;
+
+
+/** HAVING **/
+SELECT COUNT(idcliente), Bairro
+FROM CLIENTE
+GROUP BY Bairro
+HAVING COUNT(idcliente) >= 3;
+
+/** INNER JOIN **/
+SELECT CLIENTE.nome, GERA.idcontrato, CONTRATO.numerocontrato
+FROM CLIENTE
+INNER JOIN GERA
+ON CLIENTE.idcontrato = GERA.idcontrato
+ORDER BY CLIENTE.nome;
+
+/** LEFT JOIN **/
+SELECT PROCESSO.numProcesso, REU.idreu
+FROM PROCESSO
+LEFT JOIN PROCESSO 
+ON PROCESSO.idreu = REU.idreu
+ORDER BY PROCESSO.numProcesso;
+
+/** RIGHT JOIN **/
+SELECT PROCESSO.numProcesso, TESTEMUNHA.idtestemunha
+FROM PROCESSO
+RIGHT JOIN TESTEMUNHA ON PROCESSO.idtestemunha = TESTEMUNHA.idtestemunha
+ORDER BY PROCESSO.numProcesso;
+
+/** FULL JOIN **/
+SELECT PROCESSO.numProcesso, DEFENSOR.iddefensor
+FROM PROCESSO
+FULL OUTER JOIN PROCESSO ON PROCESSO.iddefensor = DEFENSOR.iddefensor
+ORDER BY PROCESSO.numProcesso;
+
+/** SUBCONSULTA **/
+SELECT idcliente, nome, bairro
+FROM CLIENTE
+WHERE idtelefone IN (SELECT idtelefone FROM TELEFONE
+WHERE idtelefone = (SELECT tipo FROM TELEFONE
+WHERE tipo = 'Celular'))
 ```
