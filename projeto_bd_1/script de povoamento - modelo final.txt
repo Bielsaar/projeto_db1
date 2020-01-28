@@ -52,8 +52,8 @@ insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (21,'Cleo Palme
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (22,'Cedric Hart','Ap #134-757 Consequat Rd.','Miramar');
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (23,'Janna White','8965 Pede. Street','Bessa');
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (24,'Quinn Salazar','Ap #726-2898 Veludo, Av.','Cabo Branco');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (25,22321654000101,'Kareem Rhodes','Ap #234-4517 Cras Av.','Jaguaribe');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (26,22987456000101,'Heather Lewis','829-154 Sed Road','Centro');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (25,'Kareem Rhodes','Ap #234-4517 Cras Av.','Jaguaribe');
+insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (26,'Heather Lewis','829-154 Sed Road','Centro');
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (27,'Hayley Newman','Ap #390-6636 Augue Avenue','Torre');
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (28,'Rajah Sears','Ap #674-3556 Est, Rd.','Bancarios');
 insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (29,'Thomas Alston','Ap #931-6928 Dictum. Av.','Castelo Branco'); 
@@ -67,12 +67,12 @@ insert into FISICA (idcliente, cpf) values (3, 94002059022);
 insert into FISICA (idcliente, cpf) values (7, 84136781001);
 insert into FISICA (idcliente, cpf) values (8, 98289644567);
 insert into FISICA (idcliente, cpf) values (9, 10092059022);
-insert into FISICA (idcliente, cpf) values (10, 01067301001);
+insert into FISICA (idcliente, cpf) values (10, 51067301001);
 insert into FISICA (idcliente, cpf) values (11, 45089648487);
 insert into FISICA (idcliente, cpf) values (12, 68900205917);
 insert into FISICA (idcliente, cpf) values (13, 84138712987);
 insert into FISICA (idcliente, cpf) values (14, 12289648448);
-insert into FISICA (idcliente, cpf) values (15, 04502059022);
+insert into FISICA (idcliente, cpf) values (15, 74502059022);
 
 
 /**Tabela Jurídica**/
@@ -167,16 +167,16 @@ insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('10:04', 2,
 insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('8:54', 3, '2019-10-30', 105);
 insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('9:59', 4, '2019-07-11', 278);
 insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('8:05', 5, '2019-10-04', 383);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:15', 14,'2019/06/19', 455);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('9:15', 25,'2019/06/19', 569);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:15', 14,'2019/06/07', 150);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('13:50', 12,'2019/10/20', 467);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('13:29', 21,'2019/04/26', 210);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('8:00', 5, '2019-10-04', 42);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:00', 14,'2019/06/19', 59);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('10:15', 25,'2019/06/19', 198);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('14:00', 14,'2019/06/07', 314);
-insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('15:30', 12,'2019/10/20', 256);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:15', 14,'2019-06-18', 455);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('9:15', 25,'2019-06-20', 569);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:16', 14,'2019-06-08', 150);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('13:50', 12,'2019-10-20', 467);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('13:29', 21,'2019-04-26', 210);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('8:09', 5, '2019-10-03', 42);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('16:00', 14,'2019-06-27', 59);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('10:15', 25,'2019-06-01', 198);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('14:00', 14,'2019-06-07', 314);
+insert into AGENDA (hora_inicio, idcliente, dia, idconsulta) values ('15:30', 12,'2019-10-19', 256);
 
 
 /**Tabela Contrato**/
@@ -186,34 +186,34 @@ insert into CONTRATO (idcontrato, numero_contrato, valor) values (257, 1000257, 
 insert into CONTRATO (idcontrato, numero_contrato, valor) values (101, 1000784, 900);
 insert into CONTRATO (idcontrato, numero_contrato, valor) values (112, 1000001, 76900);
 insert into CONTRATO (idcontrato, numero_contrato, valor) values (96, 1000425, 12300);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (20, 1000235, 190000);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (78, 1000257, 75000);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (176, 1000784, 9000);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (125, 1000001, 59500);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (268, 1000425, 12000);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (52, 1000235, 50000);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (278, 1000257, 60000);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (145, 1000784, 1900);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (225, 1000001, 37500);
-insert into CONTRATO (idcontrato, numero_contrato, valor) values (98, 1000425, 123000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (20, 1000238, 190000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (78, 1000258, 75000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (150, 1000785, 9000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (125, 1000000, 59500);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (268, 1000426, 12000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (52, 1000239, 50000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (278, 1000259, 60000);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (145, 1000786, 1900);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (225, 1000003, 37500);
+insert into CONTRATO (idcontrato, numero_contrato, valor) values (98, 1000427, 123000);
 
 
 /**Tabela Gera**/
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (278, 4, '2016-07-11', 95);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (105, 3, '2019-08-30', 257);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (687, 2, '2017-05-31', 101);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (502, 1, '2017-05-15', 112);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (383, 5, '2016-10-04', 96);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (455, 4, '2015-07-11', 20);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (150, 3, '2016-10-30', 78);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (569, 2, '2020-05-31', 176);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (467, 1, '2017-05-25', 125);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (210, 5, '2019-10-04', 268);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (42, 4, '2015-11-10', 52);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (59, 3, '2019-10-30', 278);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (198, 2, '2020-05-31', 145);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (314, 1, '2019-05-15', 225);
-insert into GERA (idconsulta, idcliente, dia, idcontrato) values (256, 5, '2016-10-04', 98);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (278, 4, '2019-05-15', 95);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (105, 3, '2020-05-31', 257);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (687, 2, '2019-10-30', 101);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (502, 1, '2019-07-11', 112);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (383, 5, '2019-10-04', 96);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (455, 4, '2019-06-18', 20);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (150, 3, '2019-06-20', 78);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (569, 2, '2019-06-08', 150);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (467, 1, '2019-10-20', 125);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (210, 5, '2019-04-26', 268);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (42, 4,  '2019-10-04', 52);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (59, 3,  '2019-06-27', 278);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (198, 2, '2019-06-01', 145);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (314, 1, '2019-06-07', 225);
+insert into GERA (idconsulta, idcliente, dia, idcontrato) values (256, 5, '2019-10-20', 98);
 
 /**Tabela Defensor**/
 insert into DEFENSOR (iddefensor, nome, oab_def, escritorio) values (74, 'Melissa Golton', 7944, 'Demizz');
@@ -258,8 +258,8 @@ insert into VINCULADO (iddefensor, idreu, idtestemunha) values (74, 173, 294);
 insert into VINCULADO (iddefensor, idreu, idtestemunha) values (78, 168, 213);
 
 /**Tabela Processo**/
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (989, 18607278320198152001, 59520, 74, 151, 294, 500, 400);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (898, 18507278320198152001, 2578, 75, 152, 234, 501, 240);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (989, 18607278320198152001, 95, 74, 151, 294, 500, 400);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (898, 18507278320198152001, 257, 75, 152, 234, 501, 240);
 insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (797, 18707278320198152001, 101, 76, 200, 263, 502, 450);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (696, 18807278320198152001, 1125, 77, 173, 216, 503, 460);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (595, 18907278320198152001, 9668, 78, 168, 213, 504, 230);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (696, 18807278320198152001, 112, 77, 173, 216, 503, 460);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (595, 18907278320198152001, 225, 78, 168, 213, 504, 230);
