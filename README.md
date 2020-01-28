@@ -905,12 +905,12 @@ WHERE idfuncionario = 2
 
 /** IN **/
 SELECT * FROM TELEFONE
-WHERE tip IS ('Fixo','Fax');
+WHERE tip IN ('Fixo','Fax');
 
 
 /** NOT IN **/
 SELECT * FROM TELEFONE
-WHERE tipo IS NOT ('Celular');
+WHERE tipo NOT IN ('Celular');
 
 /** BETWEEN **/
 SELECT * FROM CONTRATO
