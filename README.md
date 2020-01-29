@@ -189,6 +189,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | idcliente | INT  | NÃO  |  X |   |  |
 | nomeCliente | VARCHAR(45)  | NÃO  |   |   |  |
 | rua | VARCHAR(45)  | NÃO  |   |   |  |
+| numero | VARCHAR(45)  | NÃO  |   |   |  |
 | bairro | VARCHAR(45)  | NÃO  |   |   |  |  |
 
 - Constraints:
@@ -261,6 +262,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
+|  - |  Chave primária | Chave primária  | PK_gera | PRIMARY KEY (idconsulta, idcliente, dia, idcontrato)  |
 |  idconsulta |  Chave estrangeira referenciando coluna idconsulta da tabela consulta | Identificador da consulta  | FK_gera_consulta | FOREIGN KEY (idconsulta) REFERENCES consulta  |
 | idcliente  | Chave estrangeira referenciando coluna idcliente da tabela cliente  | Identificador do cliente  |  FK_gera_cliente | FOREIGN KEY (idcliente) REFERENCES cliente |
 | dia  | Chave rpimária  | Identificador da data  |  PK_dia | PRIMARY KEY (dia)|
@@ -289,9 +291,6 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  idprocesso |  BIGINT | NÃO  |  X |   | |
 | numProcesso | DECIMAL (38, 0)  | NÃO  |   |   | X |
 |  idcontrato |  BIGINT | NÃO  |   | X  | |
-| idedefensor | INT  | NÃO  |   |  X |  |
-| idreu | INT  | NÃO  |   |  X |  | 
-| idtestemunha | INT  | NÃO  |   |  X |  |
 | idvara | INT  | NÃO  |   |  X |  |
 | idjuiz | INT  | NÃO  |   |  X | |  |
 
@@ -302,14 +301,11 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idprocesso |  Chave primária | Identificador do processo  | PK_processo | PRIMARY KEY (idprocesso) |
+|  idprocesso |  Chave primária | Identificador do processo  | PK_processo | PRIMARY KEY (idprocesso, idcontrato, idvara, idjuiz) |
 | idcontrato  | Chave estrangeira referenciando coluna contrato da tabela contrato  | Identificador do contrato  |  FK_processo_contrato | FOREIGN KEY (idcontrato) REFERENCES contrato |
-| iddefensor  | Chave estrangeira referenciando coluna iddefensor da tabela defensor  | Identificador do advogado ou representante judicial do réu  |  FK_processo_defensor | FOREIGN KEY (iddefensor) REFERENCES defensor |
-| idreu  | Chave estrangeira referenciando coluna idreu da tabela reu  | Identificador do  réu  |  FK_processo_reu | FOREIGN KEY (idreu) REFERENCES reu |
-| idtestemunha  | Chave estrangeira referenciando coluna idtestemunha da tabela testemunha  | Identificador da testemunha  |  FK_processo_testemunha | FOREIGN KEY (idtestemunha) REFERENCES testemunha|
 | idvara  | Chave estrangeira referenciando coluna idvara da tabela vara  | Identifica a vara ao qual o processo está vinculado  |  FK_processo_vara | FOREIGN KEY (idvara) REFERENCES vara |
 | idjuiz  | Chave estrangeira referenciando coluna idjuiz da tabela juiz  | Identifica o juiz ao qual o processo está vinculado  |  FK_processo_juiz | FOREIGN KEY (idjuiz) REFERENCES juiz |
-| numProcesso  | Chave candidata  | Identificação única do processo  |  AK_Processo | FUNIQUE		(numProcesso) |
+| numProcesso  | Chave candidata  | Identificação única do processo  |  AK_Processo | UNIQUE		(numProcesso) |
 | numProcesso  | Check  | Checa se o número do processo possui a quantidade correta de dígitos  |  CK_numProcesso | CHECK (LEN(numProcesso) = 20)
 
 **5.14 Tabela Vinculado**
@@ -319,12 +315,14 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | idedefensor | int  | NÃO  |   |  X |  |
 | idreu | int  | NÃO  |   |  X |  | 
 | idtestemunha | int  | NÃO  |   |  X |  | |
+| idprocesso | bigint  | NÃO  |   |  X |  | |
 
 
 - Constraints:
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
+| .  | Chave primária  | Chave primária  |  PK_vinculado	 | PRIMARY KEY (iddefensor, idprocesso, idreu, idtestemunha) |
 | iddefensor  | Chave estrangeira referenciando coluna iddefensor da tabela defensor  | Identificador do advogado ou representante judicial do réu  |  FK_vinculado_defensor | FOREIGN KEY (iddefensor) REFERENCES defensor |
 | idreu  | Chave estrangeira referenciando coluna idreu da tabela reu  | Identificador do  réu  |  FK_vinculado_reu | FOREIGN KEY (idreu) REFERENCES reu |
 | idtestemunha  | Chave estrangeira referenciando coluna idtestemunha da tabela testemunha | Identificador da testemunha  |  FK_vinculado_testemunha | FOREIGN KEY (idtestemunha) REFERENCES testemunha |
@@ -408,9 +406,10 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idvara |  Chave primária | Identificador da vara  | PK_idvara | PRIMARY KEY (idvara)  |
+|  idvara |  Chave primária | Identificador da vara  | PK_vara | PRIMARY KEY (idvara, idjuiz)  |
 | idjuiz  | Chave estrangeira referenciando coluna idjuiz da tabela juiz  | Identificador do  juiz  |  FK_vara_juiz | FOREIGN KEY (idjuiz) REFERENCES juiz |
-| num_vara  | Chave estrangeira referenciando colunanum_vara da tabela vara  | Identificador da vara  |  AK_vara | UNIQUE(num_vara) |
+| num_vara  | Chave estrangeira referenciando coluna num_vara da tabela vara  | Identificador da vara  |  AK_vara | UNIQUE(num_vara) |
+| idjuiz  | Chave estrangeira referenciando coluna idjuiz da tabela juiz  | Identificador do  juiz  |  AK_vara_idjuiz | UNIQUE(idjuiz) |
 
 
 # 6. Script de Criação do BD
