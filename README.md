@@ -105,7 +105,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  Chave primária | Identificador do funcionário | PK_secretaria | PRIMARY KEY (idfuncionario, cfa)  |
+|  idfuncionario |  Chave primária | Identificador do funcionário | PK_secretaria | PRIMARY KEY (idfuncionario)  |
 |  idfuncionario | Chave estrangeira | Chave estrangeira referenciando coluna idfuncionario da tabela funcionario | FK_scretaria_funcionario  |  FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 |  cfa |  Chave candidata  | Indica o registro no Conselho Federal de Arquivologia  | AK_secretaria  | UNIQUE (cfa) |
 
@@ -121,7 +121,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  Chave primária | Identificador do funcionario | PK_contador | PRIMARY KEY (idfuncionario, crc)  |
+|  idfuncionario |  Chave primária | Identificador do funcionario | PK_contador | PRIMARY KEY (idfuncionario)  |
 |  idfuncionario | Chave estrangeira |  Chave estrangeira referenciando coluna idfuncionario da tabela funcionario | FK_contador_funcionario  |  FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 |  crc |  Chave candidata  | Indica o registro no Conselho Regional de Contabilidade  | AK_contador  | UNIQUE (crc) |
 
@@ -138,7 +138,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  Chave primária | Identificador do funcionario | PK_advogado | PRIMARY KEY (idfuncionario, oab)  |
+|  idfuncionario |  Chave primária | Identificador do funcionario | PK_advogado | PRIMARY KEY (idfuncionario)  |
 |  idfuncionario | Chave estrangeira |  Chave estrangeira referenciando coluna idfuncionario da tabela funcionario |FK_advogado_funcionario	  |  FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 |  oab |  Chave candidata  | Indica o registro no Ordem ods Advogados do Brasil  | AK_advogado  | UNIQUE (oab) |
 |  id_coordena |  Chave estrangeira | Chave estrangeira referenciando coluna id_coordena da tabela advogado |FK_id_coordenado | FOREIGN KEY (id_coordena) REFERENCES advogado  |
