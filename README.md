@@ -10,29 +10,29 @@
 1. Minimundo
 2. Modelo conceitual
 3. Modelo lógico
-5. Dicionário de dados
-- 5.1  Tabela Funcionário
-- 5.2  Tabela Secretária
-- 5.3  Tabela Contador
-- 5.4  Tabela Advogado
-- 5.5  Tabela Consulta
-- 5.6  Tabela Agenda
-- 5.7  Tabela Cliente
-- 5.8  Tabela Física
-- 5.9  Tabela Jurídica
-- 5.10 Tabela Telefone
-- 5.11 Tabela Gera
-- 5.12 Tabela Contrato
-- 5.13 Tabela Processo
-- 5.14 Tabela Vinculado
-- 5.15 Tabela Defensor
-- 5.16 Tabela Réu
-- 5.17 Tabela Testemunha
-- 5.18 Tabela Juiz
-- 5.19 Tabela Vara
-6. Script de Criação do BD
-7. Script de povoamento do BD
-8. Scripts de alterações
+4. Dicionário de dados
+- 4.1  Tabela Funcionário
+- 4.2  Tabela Secretária
+- 4.3  Tabela Contador
+- 4.4  Tabela Advogado
+- 4.5  Tabela Consulta
+- 4.6  Tabela Agenda
+- 4.7  Tabela Cliente
+- 4.8  Tabela Física
+- 4.9  Tabela Jurídica
+- 4.10 Tabela Telefone
+- 4.11 Tabela Gera
+- 4.12 Tabela Contrato
+- 4.13 Tabela Processo
+- 4.14 Tabela Vinculado
+- 4.15 Tabela Defensor
+- 4.16 Tabela Réu
+- 4.17 Tabela Testemunha
+- 4.18 Tabela Juiz
+- 4.19 Tabela Vara
+5. Script de Criação do BD
+6. Script de povoamento do BD
+7. Scripts de alterações
 
 ------------
 # 1. Minimundo de um escritório de advocacia
@@ -74,10 +74,10 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 ------------
 
-# 5. Dicionário de dados
+# 4. Dicionário de dados
 
 
-**5.1 Tabela Funcionário**
+**4.1 Tabela Funcionário**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -93,7 +93,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  idfuncionario |  Chave primária | Identificador do funcionário  | PK_funcionario  | PRIMARY KEY (idfuncionario) |
 | nome  | Chave alternativa  | Nome do funcionário  | AK_funcionario  | UNIQUE (nome) | |
 
-**5.2 Tabela Secretária**
+**4.2 Tabela Secretária**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -109,7 +109,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  idfuncionario | Chave estrangeira | Chave estrangeira referenciando coluna idfuncionario da tabela funcionario | FK_scretaria_funcionario  |  FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 |  cfa |  Chave candidata  | Indica o registro no Conselho Federal de Arquivologia  | AK_secretaria  | UNIQUE (cfa) |
 
-**5.3 Tabela Contador**
+**4.3 Tabela Contador**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -125,7 +125,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  idfuncionario | Chave estrangeira |  Chave estrangeira referenciando coluna idfuncionario da tabela funcionario | FK_contador_funcionario  |  FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 |  crc |  Chave candidata  | Indica o registro no Conselho Regional de Contabilidade  | AK_contador  | UNIQUE (crc) |
 
-**5.4 Tabela Advogado**
+**4.4 Tabela Advogado**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -143,7 +143,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  oab |  Chave candidata  | Indica o registro no Ordem ods Advogados do Brasil  | AK_advogado  | UNIQUE (oab) |
 |  id_coordena |  Chave estrangeira | Chave estrangeira referenciando coluna id_coordena da tabela advogado |FK_id_coordenado | FOREIGN KEY (id_coordena) REFERENCES advogado  |
 
-**5.5 Tabela Consulta**
+**4.5 Tabela Consulta**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -159,7 +159,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | idfuncionario  | Chave estrangeira referenciando coluna idfuncionario da tabela funcionario  | Nome do funcionário  |  FK_consulta_funcionario | FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 
 
-**5.6 Tabela Agenda**
+**4.6 Tabela Agenda**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -177,7 +177,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | idconsulta  | Chave estrangeira referenciando coluna idconsulta da tabela consulta  | Identificador da consulta  |  FK_agenda_consulta | FOREIGN KEY (idconsulta) REFERENCES consulta |
 | hora_inicio  | Chave candidata  | Indica a hora agendada  | AK_hora_inicio  | UNIQUE (hora_inicio) |
 
-**5.7 Tabela Cliente**
+**4.7 Tabela Cliente**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -193,7 +193,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  idcliente |  Chave primária | Identificador do cliente  | PK_idcliente | PRIMARY KEY (idcliente)  |
 
-**5.8 Tabela Fisica**
+**4.8 Tabela Fisica**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -210,7 +210,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  cpf |  Chave candidata  | Indica o CPF  | AK_cpf  | UNIQUE (cpf) |
 |  cpf |  Check  | Confere se o CPF tem a quantidade correta de números  | CK_cpf  | CHECK		(LEN(cpf) = 11) |
 
-**5.9 Tabela Juridica**
+**4.9 Tabela Juridica**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -227,7 +227,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  cnpj |  Chave candidata  | Indica o CNPJ  | AK_cnpj  | UNIQUE (cnpj) |
 |  cnpj |  Check  | Confere se o CNPJ tem a quantidade correta de números  | CK_cnpj  | CHECK		(LEN(cnpj) = 11) |
 
-**5.10 Tabela Telefone**
+**4.10 Tabela Telefone**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -243,7 +243,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  fone |  Chave primária | Identificador do cliente  | PK_fone | PRIMARY KEY (fone,idcliente)  |
 |  idcliente |  Chave estrangeira referenciando coluna idcliente da tabela cliente | Identificador do cliente  | FK_fone_cliente | FOREIGN KEY (idcliente) REFERENCES cliente  |
 
-**5.11 Tabela Gera**
+**4.11 Tabela Gera**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -263,7 +263,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | dia  | Chave rpimária  | Identificador da data  |  PK_dia | PRIMARY KEY (dia)|
 | idcontrato  | Chave estrangeira referenciando coluna contrato da tabela contrato  | Identificador do contrato  |  FK_gera_contrato | FOREIGN KEY (idcontrato) REFERENCES contrato |
 
-**5.12 Tabela Contrato**
+**4.12 Tabela Contrato**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -279,7 +279,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  idcontrato |  Chave primária | Identificador do contrato  | PK_contrato | PRIMARY KEY (idcontrato)  |
 |  numero_contrato |  Chave candidata | Identificador alternativo do contrato  | AK_contrato | UNIQUE (numero_contrato)  |	
 
-**5.13 Tabela Processo**
+**4.13 Tabela Processo**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -302,7 +302,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | numProcesso  | Chave candidata  | Identificação única do processo  |  AK_Processo | UNIQUE		(numProcesso) |
 | numProcesso  | Check  | Checa se o número do processo possui a quantidade correta de dígitos  |  CK_numProcesso | CHECK (LEN(numProcesso) = 20)
 
-**5.14 Tabela Vinculado**
+**4.14 Tabela Vinculado**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -327,7 +327,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | idvara  | Chave estrangeira referenciando coluna idvara da tabela vara | Identificador da vara  |  FK_vinculado_processo_vara | FOREIGN KEY (idvara) REFERENCES vara |
 | idcontrato | Chave estrangeira referenciando coluna idcontrato  da tabela contrato | Identificador do contrato  |  FK_vinculado_processo_contrato | FOREIGN KEY (idcontrato) REFERENCES contrato |
 
-**5.15 Tabela Defensor**
+**4.15 Tabela Defensor**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -344,7 +344,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | iddefensor  | Chave primária  | Identificador do advogado ou representante judicial do réu  |  PK_iddefensor | PRIMARY KEY (iddefensor)|
 | oab_def  | Chave candidata  | Identificador a identificação profissional do advogado que defende o réu  |  AK_oab_def | UNIQUE (oab_def) |
 
-**5.16 Tabela Réu**
+**4.16 Tabela Réu**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -361,7 +361,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  idreu |  Chave primária | Identificador do reu  | PK_idreu | PRIMARY KEY (idreu)  |
 
-**5.17 Tabela Testemunha**
+**4.17 Tabela Testemunha**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -377,7 +377,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 |  idtestemunha |  Chave primária | Identificador da testemunha  | PK_testemunha | PRIMARY KEY (idtestemunha)  |
 |  nome |  Chave candidata | Nome da testemunha  | AK_testemunha | UNIQUE (nome)  |
 
-**5.18 Tabela Juiz**
+**4.18 Tabela Juiz**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -391,7 +391,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  idjuiz |  Chave primária | Identificador do juiz  | PK_juiz | PRIMARY KEY (idjuiz)  |
 
-**5.19 Tabela Vara**
+**4.19 Tabela Vara**
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -412,7 +412,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | idjuiz  | Chave estrangeira referenciando coluna idjuiz da tabela juiz  | Identificador do  juiz  |  AK_vara_idjuiz | UNIQUE(idjuiz) |
 
 
-# 6. Script de Criação do BD
+# 5. Script de Criação do BD
 
 ```sql
 /***Cria o banco de dados***/ 
@@ -768,7 +768,7 @@ CONSTRAINT	CK_numProcesso CHECK		(LEN(numProcesso) = 20)
 )
 ```
 
-# 7. Script de povoamento do BD
+# 6. Script de povoamento do BD
 
 ```sql
 /**Tabela Funcionario**/
@@ -1038,7 +1038,7 @@ insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) value
 insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) values (595, 18907278320198152001, 225, 504, 230);
 ```
 
-# 8. Scripts de alterações
+# 7. Scripts de alterações
 
 ```sql
 /**Modifica OAB de um advogado**/
