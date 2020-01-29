@@ -245,7 +245,7 @@ CREATE TABLE CLIENTE(
 
 
 
-				rua						VARCHAR(45)	NOT NULL,
+				rua					VARCHAR(45)	NOT NULL,
 
 
 
@@ -842,25 +842,39 @@ CREATE TABLE VINCULADO(
 
 
 
-			iddefensor					INT			NOT NULL,
+			iddefensor			INT			NOT NULL,
 
 
 
-			idprocesso					BIGINT			NOT NULL,
-
-
-
-
-			idreu						INT			NOT NULL,
+			idprocesso			BIGINT			NOT NULL,
 
 
 
 
-			idtestemunha				INT			NOT NULL,
+			idreu				INT			NOT NULL,
 
 
 
-CONSTRAINT	PK_vinculado			PRIMARY KEY (iddefensor, idprocesso, idreu, idtestemunha),
+
+			idtestemunha			INT			NOT NULL,
+
+
+			
+			idcontrato			BIGINT			NOT NULL,
+
+
+
+
+			idvara				INT			NOT NULL,
+
+
+
+
+			idjuiz				INT			NOT NULL,
+
+
+
+CONSTRAINT	PK_vinculado			PRIMARY KEY (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz),
 
 
 
@@ -870,6 +884,17 @@ CONSTRAINT	FK_vinculado_defensor		FOREIGN KEY (iddefensor) REFERENCES defensor,
 
 CONSTRAINT	FK_vinculado_processo		FOREING KEY (idprocesso) REFERENCES processo,
 
+
+
+CONSTRAINT	FK_vinculado_processo_contrato  FOREING KEY (idcontrato) REFERENCES processo,
+
+
+
+CONSTRAINT	FK_vinculado_processo_vara	FOREING KEY (idvara) REFERENCES processo,
+
+
+
+CONSTRAINT	FK_vinculado_processo_juiz	FOREING KEY (idjuiz) REFERENCES processo,
 
 
 
