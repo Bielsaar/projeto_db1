@@ -197,7 +197,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| idcliente | INT  | NÃO  |   | X  |  |
+| idcliente | INT  | NÃO  | X  | X  |  |
 | cpf | BIGINT  | NÃO  |   |   | X |
 
 
@@ -214,7 +214,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| idcliente | INT  | NÃO  |   | X  |  |
+| idcliente | INT  | NÃO  | X  | X  |  |
 | cnpj | BIGINT  | NÃO  |   |   | X |
 
 
@@ -247,10 +247,10 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idconsulta |  BIGINT | NÃO  |   | X  | |
-| idcliente | INT  | NÃO  |   |  X |  |
+|  idconsulta |  BIGINT | NÃO  | X  | X  | |
+| idcliente | INT  | NÃO  | X  |  X |  |
 | dia | DATE  | NÃO  |  X |   |  |
-| idcontrato | BIGINT  | NÃO  |   |  X |  | |
+| idcontrato | BIGINT  | NÃO  | X  |  X |  | |
 
 
 - Constraints:
