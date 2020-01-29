@@ -1,4 +1,4 @@
-/**Tabela Funcion·rio**/
+/**Tabela Funcionario**/
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (1, 'Nancee Parkman', 1315281029, 'nparkman0@sogou.com');
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (2, 'Maxy Bartosik', 8042535267, 'mbartosik1@nsw.gov.au');
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (3, 'Hazel McCoughan', 1102228562, 'hmccoughan2@cnet.com');
@@ -10,7 +10,7 @@ insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (8, 'Andre
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (9, 'Tymothy Edgeworth', 9067062679, 'tedgeworth8@hhs.gov');
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (10, 'Nancee Prichet', 5457198655, 'nprichet9@livejournal.com');
 
-/**Tabela Secret·ria**/
+/**Tabela Secretaria**/
 insert into SECRETARIA (idfuncionario, cfa) values (1, 847);
 insert into SECRETARIA (idfuncionario, cfa) values (2, 622);
 
@@ -40,7 +40,7 @@ insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (9,'Nad
 insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (10,'Vladimir Orr', '9112', 'Eu Ave','Cabo Branco');
 insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (11,'Anastasia Small','973', 'Accumsan Rd.','Altiplano');
 insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (12,'Madonna Gilbert','23', 'Luctus Ave','Manaira');
-insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (13,'Clinton Conley','7875', 'Fusce St.','Tamba˙');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (13,'Clinton Conley','7875', 'Fusce St.','Tamba√∫');
 insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (14,'Wilma Flowers','88', 'Taner, Street','Tambia');
 insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (15,'Belle Anthony','2150', 'In Street','Manaira');
 insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (16,'Ralph House','173627', 'Curabitur Avenue','Miramar');
@@ -60,7 +60,7 @@ insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (29,'Th
 insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (30,'Kerry Love','9376', 'Ultrices. Av.','Centro');
 
 
-/**Tabela FÌsica**/
+/**Tabela Fisica**/
 insert into FISICA (idcliente, cpf) values (1, 84138701001);
 insert into FISICA (idcliente, cpf) values (2, 98289648448);
 insert into FISICA (idcliente, cpf) values (3, 94002059022);
@@ -75,7 +75,7 @@ insert into FISICA (idcliente, cpf) values (14, 12289648448);
 insert into FISICA (idcliente, cpf) values (15, 74502059022);
 
 
-/**Tabela JurÌdica**/
+/**Tabela Juridica**/
 insert into JURIDICA (idcliente, cnpj) values (4, 36808061000127);
 insert into JURIDICA (idcliente, cnpj) values (5, 70897293000137);
 insert into JURIDICA (idcliente, cnpj) values (6, 50897293100137);
@@ -145,17 +145,17 @@ insert into TELEFONE (idcliente, fone, tipo) values (26,'9810828040', 'Celular')
 insert into TELEFONE (idcliente, fone, tipo) values (18,'9897171529', 'Celular');
 
 /**Tabela Consulta**/
-insert into CONSULTA (idconsulta, idfuncionario, pauta) values (502, 5, 'Invent·rio');
-insert into CONSULTA (idconsulta, idfuncionario, pauta) values (687, 6, 'Invent·rio');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (502, 5, 'Invent√°rio');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (687, 6, 'Invent√°rio');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (105, 7, 'Defesa Criminal');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (278, 6, 'Penhora');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (383, 8, 'Defesa Criminal');
-insert into CONSULTA (idconsulta, idfuncionario, pauta) values (455, 5, 'Invent·rio');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (455, 5, 'Invent√°rio');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (569, 5, 'Penhora');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (150, 7, 'Defesa Criminal');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (467, 6, 'Penhora');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (210, 10, 'Defesa Criminal');
-insert into CONSULTA (idconsulta, idfuncionario, pauta) values (42, 7, 'Invent·rio');
+insert into CONSULTA (idconsulta, idfuncionario, pauta) values (42, 7, 'Invent√°rio');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (59, 6, 'Penhora');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (198, 7, 'Defesa Criminal');
 insert into CONSULTA (idconsulta, idfuncionario, pauta) values (314, 6, 'Penhora');
@@ -226,7 +226,7 @@ insert into DEFENSOR (iddefensor, nome, oab_def, escritorio) values (78, 'Sam Bu
 insert into REU (idreu, nome, cidade, rua, email, telefone) values (151, 'Breena Gallemore', 'Bontoc', 'Porter', 'errofdp@odeioisso.com', 2294411741);
 insert into REU (idreu, nome, cidade, rua, email, telefone) values (152, 'Holden Oxherd', 'Yurkivka', 'Sullivan', 'hoxherd1@trellian.com', 8382537519);
 insert into REU (idreu, nome, cidade, rua, email, telefone) values (200, 'Sioux Peeters', 'Kisangani', 'Pennsylvania', 'speeters2@yandex.ru', 4546947732);
-insert into REU (idreu, nome, cidade, rua, email, telefone) values (173, 'Evita Demeter', 'Fajıes', 'Holmberg', 'edemeter3@i2i.jp', 1129482098);
+insert into REU (idreu, nome, cidade, rua, email, telefone) values (173, 'Evita Demeter', 'Faj√µes', 'Holmberg', 'edemeter3@i2i.jp', 1129482098);
 insert into REU (idreu, nome, cidade, rua, email, telefone) values (168, 'Kata Bates', 'Krajan Kinanti', 'Spaight', 'kbates4@house.gov', 8463280940);
 
 /**Tabela Testemunha**/
@@ -247,15 +247,15 @@ insert into JUIZ (idjuiz, nome, matricula) values (230, 'Crosby Roddell', 17186)
 insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (500, 400, 1, 'Orekhovo-Zuyevo', 'Northfield', 'PB');
 insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (501, 240, 2, 'Hengjian', 'Warrior', 'SE');
 insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (502, 450, 3, 'Saryaghash', 'Mitchell', 'SP');
-insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (503, 460, 4, 'CahabÛn', 'North', 'RJ');
+insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (503, 460, 4, 'Cahab√≥n', 'North', 'RJ');
 insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (504, 230, 5, 'Sukamaju', 'Heffernan', 'AM');
 
 /**Tabela Vinculado**/
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (74, 989, 151, 263);
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (76, 898, 152, 216);
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (75, 797, 200, 234);
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (74, 696, 173, 294);
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (78, 595, 168, 213);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (74, 989, 151, 263, 95, 500, 400);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (76, 898, 152, 216, 257, 501, 240);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (75, 797, 200, 234, 101, 502, 450);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (74, 696, 173, 294, 112, 503, 460);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (78, 595, 168, 213, 225, 504, 230);
 
 /**Tabela Processo**/
 insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) values (989, 18607278320198152001, 95, 500, 400);
