@@ -10,7 +10,6 @@
 1. Minimundo
 2. Modelo conceitual
 3. Modelo lógico
-4. Modelo lógico expandido
 5. Dicionário de dados
 - 5.1  Tabela Funcionário
 - 5.2  Tabela Secretária
@@ -65,17 +64,13 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 ------------
 
 # 2. Modelo conceitual
-![](https://github.com/gustavogalisa/projeto_db1/blob/master/projeto_bd_1/modelo_conceitual_definitivo.png)
+![](https://github.com/gustavogalisa/projeto_db1/blob/master/projeto_revisado/Conceitual_1_FINAL_revisado_img.png)
 
 ------------
 
 # 3. Modelo lógico
-![](https://github.com/gustavogalisa/projeto_db1/blob/master/projeto_bd_1/Modelo_logico_organizado.png)
+![](https://github.com/gustavogalisa/projeto_db1/blob/master/projeto_revisado/Modelo%20Logico%20Completo%20e%20Corrigido%2C%20em%20PNG.png)
 
-------------
-
-# 4. Modelo lógico expandido
-![](https://github.com/gustavogalisa/projeto_db1/blob/master/projeto_bd_1/modelo_completo_expandido_definitivo.png)
 
 ------------
 
@@ -102,7 +97,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  INT | NÃO  |   | x  | |
+|  idfuncionario |  INT | NÃO  | x  | x  | |
 | cfa  | INT  | NÃO  |   |   | x| |
 
 
@@ -110,7 +105,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  Chave primária | Identificador do funcionário | PK_secretaria | PRIMARY KEY (idfuncionario)  |
+|  idfuncionario |  Chave primária | Identificador do funcionário | PK_secretaria | PRIMARY KEY (idfuncionario, cfa)  |
 |  idfuncionario | Chave estrangeira | Chave estrangeira referenciando coluna idfuncionario da tabela funcionario | FK_scretaria_funcionario  |  FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 |  cfa |  Chave candidata  | Indica o registro no Conselho Federal de Arquivologia  | AK_secretaria  | UNIQUE (cfa) |
 
@@ -118,7 +113,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  INT | NÃO  |   | x  | |
+|  idfuncionario |  INT | NÃO  | x  | x  | |
 | crc  | INT  | NÃO  |   |   | x | |
 
 
@@ -126,7 +121,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  Chave primária | Identificador do funcionario | PK_contador | PRIMARY KEY (idfuncionario)  |
+|  idfuncionario |  Chave primária | Identificador do funcionario | PK_contador | PRIMARY KEY (idfuncionario, crc)  |
 |  idfuncionario | Chave estrangeira |  Chave estrangeira referenciando coluna idfuncionario da tabela funcionario | FK_contador_funcionario  |  FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 |  crc |  Chave candidata  | Indica o registro no Conselho Regional de Contabilidade  | AK_contador  | UNIQUE (crc) |
 
@@ -134,7 +129,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  INT | NÃO  |   | x  | |
+|  idfuncionario |  INT | NÃO  | x  | x  | |
 | oab  | INT  | NÃO  |   |   |x |
 | id_coordena  | INT  | SIM  |   |  x | | |
 
@@ -143,7 +138,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  idfuncionario |  Chave primária | Identificador do funcionario | PK_advogado | PRIMARY KEY (idfuncionario)  |
+|  idfuncionario |  Chave primária | Identificador do funcionario | PK_advogado | PRIMARY KEY (idfuncionario, oab)  |
 |  idfuncionario | Chave estrangeira |  Chave estrangeira referenciando coluna idfuncionario da tabela funcionario |FK_advogado_funcionario	  |  FOREIGN KEY (idfuncionario) REFERENCES funcionario |
 |  oab |  Chave candidata  | Indica o registro no Ordem ods Advogados do Brasil  | AK_advogado  | UNIQUE (oab) |
 |  id_coordena |  Chave estrangeira | Chave estrangeira referenciando coluna id_coordena da tabela advogado |FK_id_coordenado | FOREIGN KEY (id_coordena) REFERENCES advogado  |
@@ -169,15 +164,15 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  hora_inicio |  TIME | NÃO  |   |   | X|
-| idcliente | INT  | NÃO  |   |  X |  |
+| idcliente | INT  | NÃO  | X  |  X |  |
 | dia | DATE  | NÃO  |  X |   |  | 
-| idconsulta | INT | NÃO  |   |  X |  | |
+| idconsulta | INT | NÃO  | X  |  X |  | |
 
 - Constraints:
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  dia |  Chave primária | Identificador da consulta  | PK_dia | PRIMARY KEY (dia)  |
+|  dia |  Chave primária | Identificador da consulta  | PK_dia | PRIMARY KEY (dia, idcliente,idconsulta)  |
 | idcliente  | Chave estrangeira referenciando coluna idcliente da tabela cliente  | Identificador do cliente  |  FK_agenda_cliente | FOREIGN KEY (idcliente) REFERENCES cliente |
 | idconsulta  | Chave estrangeira referenciando coluna idconsulta da tabela consulta  | Identificador da consulta  |  FK_agenda_consulta | FOREIGN KEY (idconsulta) REFERENCES consulta |
 | hora_inicio  | Chave candidata  | Indica a hora agendada  | AK_hora_inicio  | UNIQUE (hora_inicio) |
