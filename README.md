@@ -237,7 +237,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
 | fone | BIGINT  | NÃO  |  X |   |  |
-| idcliente | INT  | NÃO  |   |  X |  |
+| idcliente | INT  | NÃO  | X  |  X |  |
 | tipo | VARCHAR(45)  | NÃO  |   |   |  | |
 
 
@@ -245,7 +245,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  fone |  Chave primária | Identificador do cliente  | PK_fone | PRIMARY KEY (fone)  |
+|  fone |  Chave primária | Identificador do cliente  | PK_fone | PRIMARY KEY (fone,idcliente)  |
 |  idcliente |  Chave estrangeira referenciando coluna idcliente da tabela cliente | Identificador do cliente  | FK_fone_cliente | FOREIGN KEY (idcliente) REFERENCES cliente  |
 
 **5.11 Tabela Gera**
@@ -290,10 +290,9 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  idprocesso |  BIGINT | NÃO  |  X |   | |
 | numProcesso | DECIMAL (38, 0)  | NÃO  |   |   | X |
-|  idcontrato |  BIGINT | NÃO  |   | X  | |
-| idvara | INT  | NÃO  |   |  X |  |
-| idjuiz | INT  | NÃO  |   |  X | |  |
-
+|  idcontrato |  BIGINT | NÃO  | X  | X  | |
+| idvara | INT  | NÃO  | X  |  X |  |
+| idjuiz | INT  | NÃO  | X  |  X | |  |
 
 
 
@@ -312,20 +311,26 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| idedefensor | int  | NÃO  |   |  X |  |
-| idreu | int  | NÃO  |   |  X |  | 
-| idtestemunha | int  | NÃO  |   |  X |  | |
-| idprocesso | bigint  | NÃO  |   |  X |  | |
+| idedefensor | int  | NÃO  | X  |  X |  |
+| idreu | int  | NÃO  | X  |  X |  | 
+| idtestemunha | int  | NÃO  | X  |  X |  | |
+| idprocesso | bigint  | NÃO  | X  |  X |  | |
+| idvara | int  | NÃO  | X  |  X |  | |
+| idjuiz | int  | NÃO  | X  |  X |  | |
+| idcontrato | bigint  | NÃO  | X  |  X |  | |
 
 
 - Constraints:
 
 | COLUNA |TIPO  | DESCRIÇÃO  | NOME | EXPRESSÃO
 | ------------ | ------------ | ------------ | ------------ | ------------ |
-| .  | Chave primária  | Chave primária  |  PK_vinculado	 | PRIMARY KEY (iddefensor, idprocesso, idreu, idtestemunha) |
+| .  | Chave primária  | Chave primária  |  PK_vinculado	 | PRIMARY KEY (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) |
 | iddefensor  | Chave estrangeira referenciando coluna iddefensor da tabela defensor  | Identificador do advogado ou representante judicial do réu  |  FK_vinculado_defensor | FOREIGN KEY (iddefensor) REFERENCES defensor |
 | idreu  | Chave estrangeira referenciando coluna idreu da tabela reu  | Identificador do  réu  |  FK_vinculado_reu | FOREIGN KEY (idreu) REFERENCES reu |
 | idtestemunha  | Chave estrangeira referenciando coluna idtestemunha da tabela testemunha | Identificador da testemunha  |  FK_vinculado_testemunha | FOREIGN KEY (idtestemunha) REFERENCES testemunha |
+| idjuiz  | Chave estrangeira referenciando coluna idjuiz da tabela juiz | Identificador do juiz  |  FK_vinculado_processo_juiz | FOREIGN KEY (idtestemunha) REFERENCES testemunha |
+| idvara  | Chave estrangeira referenciando coluna idvara da tabela vara | Identificador da vara  |  FK_vinculado_processo_vara | FOREIGN KEY (idvara) REFERENCES vara |
+| idcontrato | Chave estrangeira referenciando coluna idcontrato  da tabela contrato | Identificador do contrato  |  FK_vinculado_processo_contrato | FOREIGN KEY (idcontrato) REFERENCES contrato |
 
 **5.15 Tabela Defensor**
 
@@ -396,7 +401,7 @@ Toda vara está diretamente ligada e é coordenada por apenas um juiz de direito
 | ATRIBUTO |TIPO  | NULO  | PK  | FK  | AK |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
 | idvara | INT  | NÃO  |  X |   |  |
-| idjuiz | INT  | NÃO  |   | X  |  |
+| idjuiz | INT  | NÃO  | X  | X  |  |
 | num_vara | INT  | NÃO  |   |   | X |
 | cidade | VARCHAR(45)  | NÃO  |   |   |  |
 | rua | VARCHAR(45)  | NÃO  |   |   |  |
@@ -717,11 +722,23 @@ idreu INT NOT NULL,
 
 idtestemunha INT NOT NULL, 
 
-CONSTRAINT	PK_vinculado PRIMARY KEY (iddefensor, idprocesso, idreu, idtestemunha), 
+idcontrato BIGINT NOT NULL, 
+
+idvara INT NOT NULL, 
+
+idjuiz INT NOT NULL, 
+
+CONSTRAINT	PK_vinculado PRIMARY KEY (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz), 
 
 CONSTRAINT	FK_vinculado_defensor FOREIGN KEY (iddefensor) REFERENCES defensor, 
 
 CONSTRAINT	FK_vinculado_processo FOREING KEY (idprocesso) REFERENCES processo, 
+
+CONSTRAINT	FK_vinculado_processo_contrato FOREING KEY (idcontrato) REFERENCES processo, 
+
+CONSTRAINT	FK_vinculado_processo_vara	FOREING KEY (idvara) REFERENCES processo, 
+
+CONSTRAINT	FK_vinculado_processo_juiz	FOREING KEY (idjuiz) REFERENCES processo, 
 
 CONSTRAINT	FK_vinculado_reu FOREIGN KEY (idreu) REFERENCES reu, 
 
@@ -759,7 +776,7 @@ CONSTRAINT	CK_numProcesso CHECK		(LEN(numProcesso) = 20)
 # 7. Script de povoamento do BD
 
 ```sql
-/**Tabela Funcionário**/
+/**Tabela Funcionario**/
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (1, 'Nancee Parkman', 1315281029, 'nparkman0@sogou.com');
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (2, 'Maxy Bartosik', 8042535267, 'mbartosik1@nsw.gov.au');
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (3, 'Hazel McCoughan', 1102228562, 'hmccoughan2@cnet.com');
@@ -771,7 +788,7 @@ insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (8, 'Andre
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (9, 'Tymothy Edgeworth', 9067062679, 'tedgeworth8@hhs.gov');
 insert into FUNCIONARIO (idfuncionario, nome, telefone, email) values (10, 'Nancee Prichet', 5457198655, 'nprichet9@livejournal.com');
 
-/**Tabela Secretária**/
+/**Tabela Secretaria**/
 insert into SECRETARIA (idfuncionario, cfa) values (1, 847);
 insert into SECRETARIA (idfuncionario, cfa) values (2, 622);
 
@@ -821,7 +838,7 @@ insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (29,'Th
 insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (30,'Kerry Love','9376', 'Ultrices. Av.','Centro');
 
 
-/**Tabela Física**/
+/**Tabela Fisica**/
 insert into FISICA (idcliente, cpf) values (1, 84138701001);
 insert into FISICA (idcliente, cpf) values (2, 98289648448);
 insert into FISICA (idcliente, cpf) values (3, 94002059022);
@@ -836,7 +853,7 @@ insert into FISICA (idcliente, cpf) values (14, 12289648448);
 insert into FISICA (idcliente, cpf) values (15, 74502059022);
 
 
-/**Tabela Jurídica**/
+/**Tabela Juridica**/
 insert into JURIDICA (idcliente, cnpj) values (4, 36808061000127);
 insert into JURIDICA (idcliente, cnpj) values (5, 70897293000137);
 insert into JURIDICA (idcliente, cnpj) values (6, 50897293100137);
@@ -1012,11 +1029,11 @@ insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (503, 46
 insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (504, 230, 5, 'Sukamaju', 'Heffernan', 'AM');
 
 /**Tabela Vinculado**/
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (74, 989, 151, 263);
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (76, 898, 152, 216);
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (75, 797, 200, 234);
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (74, 696, 173, 294);
-insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (78, 595, 168, 213);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (74, 989, 151, 263, 95, 500, 400);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (76, 898, 152, 216, 257, 501, 240);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (75, 797, 200, 234, 101, 502, 450);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (74, 696, 173, 294, 112, 503, 460);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha, idcontrato, idvara, idjuiz) values (78, 595, 168, 213, 225, 504, 230);
 
 /**Tabela Processo**/
 insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) values (989, 18607278320198152001, 95, 500, 400);
