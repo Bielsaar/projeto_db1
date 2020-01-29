@@ -789,36 +789,36 @@ insert into ADVOGADO (idfuncionario, oab, id_coordenado) values (9, 23328, 5);
 insert into ADVOGADO (idfuncionario, oab, id_coordenado) values (10, 22717, 5);
 
 /**Tabela Cliente**/
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (1, 'Lelia McNelly', 'Eggendart Drive', 'Torre');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (2, 'Sherlock Bechley', 'Marquette Crossing', 'Centro');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (3, 'Janenna Maddaford', 'Moulton Court', 'Brisamar');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (4, 'Lucy Overstreet', 'Gerald Hill', 'Altiplano');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (5, 'Lita Treagus', 'Grasskamp Drive', 'Centro');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (6, 'Creusa Marcelino', 'Jagua street', 'Jaguaribe');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (7,'Kirestin Franco','Ap #237-4915 Consectetuer Av.','Manaira');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (8,'Christian Gregory','305 Mauris, Av.','Bessa');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (9,'Nadine Morton','795 Nibh. St.','Centro');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (10,'Vladimir Orr','9112 Eu Ave','Cabo Branco');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (11,'Anastasia Small','973 Accumsan Rd.','Altiplano');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (12,'Madonna Gilbert','23Luctus Ave','Manaira');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (13,'Clinton Conley','7875 Fusce St.','Tambaú');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (14,'Wilma Flowers','88 Taner, Street','Tambia');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (15,'Belle Anthony','2150 In Street','Manaira');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (16,'Ralph House','173-627 Curabitur Avenue','Miramar');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (17,'Fleur Vang','803-8231 Ullamcorper St.','Centro');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (18,'Odette Park','9841 Nunc Avenue','Altiplano');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (19,'Addison Cox','2420 Lorem Road','Cabedelo');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (20,'Hop Kaufman','413 Neque Av.','Jaguaribe');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (21,'Cleo Palmer','Ap #365-9160 Augue Road','Cabedelo');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (22,'Cedric Hart','Ap #134-757 Consequat Rd.','Miramar');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (23,'Janna White','8965 Pede. Street','Bessa');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (24,'Quinn Salazar','Ap #726-2898 Veludo, Av.','Cabo Branco');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (25,'Kareem Rhodes','Ap #234-4517 Cras Av.','Jaguaribe');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (26,'Heather Lewis','829-154 Sed Road','Centro');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (27,'Hayley Newman','Ap #390-6636 Augue Avenue','Torre');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (28,'Rajah Sears','Ap #674-3556 Est, Rd.','Bancarios');
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (29,'Thomas Alston','Ap #931-6928 Dictum. Av.','Castelo Branco'); 
-insert into CLIENTE (idcliente, nomeCliente, rua, bairro) values (30,'Kerry Love','Ap #641, 9376 Ultrices. Av.','Centro');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (1, 'Lelia McNelly', '2098', 'Eggendart Drive', 'Torre');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (2, 'Sherlock Bechley', '1001', 'Marquette Crossing', 'Centro');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (3, 'Janenna Maddaford', '1912', 'Moulton Court', 'Brisamar');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (4, 'Lucy Overstreet', '110', 'Gerald Hill', 'Altiplano');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (5, 'Lita Treagus', '3002', 'Grasskamp Drive', 'Centro');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (6, 'Creusa Marcelino', '9987', 'Jagua street', 'Jaguaribe');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (7,'Kirestin Franco', '3987','Consectetuer Av.','Manaira');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (8,'Christian Gregory','305', 'Mauris, Av.','Bessa');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (9,'Nadine Morton', '795', 'Nibh. St.','Centro');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (10,'Vladimir Orr', '9112', 'Eu Ave','Cabo Branco');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (11,'Anastasia Small','973', 'Accumsan Rd.','Altiplano');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (12,'Madonna Gilbert','23', 'Luctus Ave','Manaira');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (13,'Clinton Conley','7875', 'Fusce St.','Tambaú');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (14,'Wilma Flowers','88', 'Taner, Street','Tambia');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (15,'Belle Anthony','2150', 'In Street','Manaira');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (16,'Ralph House','173627', 'Curabitur Avenue','Miramar');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (17,'Fleur Vang','8038231', 'Ullamcorper St.','Centro');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (18,'Odette Park','9841', 'Nunc Avenue','Altiplano');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (19,'Addison Cox','2420', 'Lorem Road','Cabedelo');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (20,'Hop Kaufman','413', 'Neque Av.','Jaguaribe');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (21,'Cleo Palmer','9160', 'Augue Road','Cabedelo');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (22,'Cedric Hart','757', 'Consequat Rd.','Miramar');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (23,'Janna White','8965', 'Pede. Street','Bessa');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (24,'Quinn Salazar','2898', 'Veludo, Av.','Cabo Branco');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (25,'Kareem Rhodes','4517', 'Cras Av.','Jaguaribe');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (26,'Heather Lewis','829', 'Sed Road','Centro');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (27,'Hayley Newman','6636', 'Augue Avenue','Torre');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (28,'Rajah Sears','3556', 'Est, Rd.','Bancarios');
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (29,'Thomas Alston','6928', 'Dictum. Av.','Castelo Branco'); 
+insert into CLIENTE (idcliente, nomeCliente, numero, rua, bairro) values (30,'Kerry Love','9376', 'Ultrices. Av.','Centro');
 
 
 /**Tabela Física**/
@@ -1012,18 +1012,18 @@ insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (503, 46
 insert into VARA (idvara, idjuiz, num_vara, cidade, rua, estado) values (504, 230, 5, 'Sukamaju', 'Heffernan', 'AM');
 
 /**Tabela Vinculado**/
-insert into VINCULADO (iddefensor, idreu, idtestemunha) values (74, 151, 263);
-insert into VINCULADO (iddefensor, idreu, idtestemunha) values (76, 152, 216);
-insert into VINCULADO (iddefensor, idreu, idtestemunha) values (75, 200, 234);
-insert into VINCULADO (iddefensor, idreu, idtestemunha) values (74, 173, 294);
-insert into VINCULADO (iddefensor, idreu, idtestemunha) values (78, 168, 213);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (74, 989, 151, 263);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (76, 898, 152, 216);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (75, 797, 200, 234);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (74, 696, 173, 294);
+insert into VINCULADO (iddefensor, idprocesso, idreu, idtestemunha) values (78, 595, 168, 213);
 
 /**Tabela Processo**/
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (989, 18607278320198152001, 95, 74, 151, 294, 500, 400);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (898, 18507278320198152001, 257, 75, 152, 234, 501, 240);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (797, 18707278320198152001, 101, 76, 200, 263, 502, 450);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (696, 18807278320198152001, 112, 77, 173, 216, 503, 460);
-insert into PROCESSO (idprocesso, numProcesso, idcontrato, iddefensor, idreu, idtestemunha, idvara, idjuiz) values (595, 18907278320198152001, 225, 78, 168, 213, 504, 230);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) values (989, 18607278320198152001, 95, 500, 400);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) values (898, 18507278320198152001, 257, 501, 240);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) values (797, 18707278320198152001, 101, 502, 450);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) values (696, 18807278320198152001, 112, 503, 460);
+insert into PROCESSO (idprocesso, numProcesso, idcontrato, idvara, idjuiz) values (595, 18907278320198152001, 225, 504, 230);
 ```
 
 # 8. Scripts de alterações
